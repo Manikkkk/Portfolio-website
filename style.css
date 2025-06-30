@@ -448,25 +448,26 @@ nav .fa-solid {
 
 .layer h3 {
     font-weight: 500;
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 10px;
+    font-size: 14px;
     color: var(--text-dark);
 }
 
 .layer p {
     color: var(--text-medium);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 12px;
 }
 
 .layer a {
-    margin-top: 20px;
+    margin-top: 5px;
     color: var(--background);
     text-decoration: none;
-    font-size: 18px;
-    line-height: 50px;
+    font-size: 12px;
+    line-height: 25px;
     background: var(--blue);
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     text-align: center;
     transition: all 0.3s;
