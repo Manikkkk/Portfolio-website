@@ -449,14 +449,14 @@ nav .fa-solid {
 .layer h3 {
     font-weight: 500;
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 18px;
     color: var(--text-dark);
 }
 
 .layer p {
     color: var(--text-medium);
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .layer a {
@@ -466,9 +466,9 @@ nav .fa-solid {
     font-size: 12px;
     line-height: 25px;
     background: var(--blue);
-    width: 25px;
+    width: 50px;
     height: 25px;
-    border-radius: 50%;
+    border-radius: 5%;
     text-align: center;
     transition: all 0.3s;
 }
@@ -731,9 +731,9 @@ form .btn2 {
     font-size: 15px;
     line-height: 30px;
     background: var(--blue);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    width: 50px;
+    height: 25px;
+    border-radius: 5%;
     text-align: center;
     
     }
