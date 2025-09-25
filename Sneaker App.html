@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ef81c2b193.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav class="nav-unique">
+                <a class="logo" href="index.html">
+                    <span class="logo-text">Manik</span>
+                </a>
+                <ul id="sidemenu">
+                    <li><a href="index.html#header"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="index.html#portfolio"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="index.html#services"><i class="fa-solid fa-screwdriver-wrench"></i> Skills</a></li>
+                    <li><a href="index.html#about"><i class="fa-solid fa-user"></i> About</a></li>
+                    <li><a href="index.html#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                    <!-- <i class="fa-solid fa-xmark" onclick="closemenu()"></i> -->
+                </ul>
+                <!-- <i class="fa-solid fa-bars" onclick="openmenu()"></i> -->
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container" style="margin-top: 60px; max-width: 900px;">
+            <h1 class="sub-title" style="text-align:center; font-size:2.5rem; margin-bottom: 18px;">
+                <i class="fa-solid fa-briefcase"></i> Sneaker E-commerce App
+            </h1>
+                <div class="project-gallery-wrapper">
+                    <div class="project-gallery">
+                        <img src="image/E-commerce shoes/shoes first page.png" alt="Project Main">
+                        <img src="image/E-commerce shoes/shoes second page.png" alt="Gallery 1">
+                    </div>
+                    <div class="project-gallery-mobile">
+                        <img src="image/E-commerce shoes/shoes mobile app.png" alt="Mobile App Preview">
+                    </div>
+                </div>
+                <!-- Video Section: Replace 'video/sample.mp4' with your own video file -->
+                <!-- <div style="display: flex; align-items: center; justify-content: center; flex: 1 1 260px; min-width: 220px; max-width: 360px;">
+                    <video controls width="100%" poster="image/BSR Movie Ticket Booking/movie ticket webpage.png" style="border-radius: 12px; box-shadow: 0 2px 12px 0 rgba(66,133,244,0.10); max-width: 360px;">
+                        <!-- <source src="image/cocacola brand.mp4" type="video/mp4">
+                        Your browser does not support the video tag. -->
+                    </video>
+                </div>
+            <div class="modern-card" style="max-width:100%;margin:auto;">
+                <div class="layer" style="padding:32px 24px;">
+                    <h2 style="font-size:2rem; color:var(--blue); margin-bottom:12px;">Project Overview</h2>
+                    <p style="font-size:1.1rem; color:var(--text-medium); margin-bottom:18px;">
+Drops is a modern sneaker shopping mobile app concept designed to provide a smooth and stylish shopping experience for sneaker enthusiasts. The design focuses on a clean, minimal interface with strong product visuals, intuitive navigation, and engaging call-to-actions to help users browse, explore, and purchase sneakers effortlessly.                    </p>
+                    <h3 style="color:var(--green); margin-bottom:8px;">Key Features</h3>
+                    <ul style="margin-bottom:18px; color:var(--text-dark);">
+                        <li>Home screen with search bar, brand filters, and promotional banners</li>
+                        <li>New Arrival section showcasing trending sneakers with wishlist option</li>
+                        <li>Product detail page with high-quality images, price, stock status, and reviews</li>
+                        <li>Size selection and Add to Cart/Buy Now options for easy checkout</li>
+                        <li>Wishlist and cart indicators for user convenience</li>
+                    </ul>
+                    <h3 style="color:var(--green); margin-bottom:8px;">Technologies Used</h3>
+                    <ul style="margin-bottom:18px; color:var(--text-dark);">
+                        <li>Figma (UI design, prototyping, and component creation)</li>
+                        <li>Design grids & spacing system for consistent layout</li>
+                        <li>Typography & iconography for clean visual hierarchy</li>
+                        <li>Interactive prototyping to simulate shopping and checkout flows</li>
+                    </ul>
+                    <h3 style="color:var(--green); margin-bottom:8px;">My Role & Learnings</h3>
+                    <ul style="color:var(--text-dark);">
+                        <li>Designed the UI/UX flow for a shopping app from browsing to checkout</li>
+                        <li>Focused on creating a minimal and modern e-commerce experience</li>
+                        <li>Built reusable components (cards, buttons, product previews) for scalability</li>
+                        <li>Enhanced my skills in mobile app design patterns and user-centered interactions</li>
+                        <li>Learned to balance visual appeal with functional usability in mobile UI design</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:32px;">
+                <a href="index.html#portfolio" class="btn btn2"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+            </div>
+        </section>
+    </main>
+    <footer class="copyright">
+        <p>&copy; 2025 Manik Shrestha. Crafted with passion.</p>
+    </footer>
+        <style>
+        .project-gallery-wrapper {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .project-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            min-width: 220px;
+            max-width: 420px;
+            flex: 1 1 320px;
+            justify-items: center;
+            align-items: center;
+        }
+        .project-gallery img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px 0 rgba(66,133,244,0.10);
+            background: #f8f8f8;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            aspect-ratio: unset;
+        }
+        .project-gallery-mobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 220px;
+            max-width: 360px;
+            flex: 1 1 260px;
+        }
+        .project-gallery-mobile img {
+            border-radius: 12px;
+            box-shadow: 0 2px 12px 0 rgba(66,133,244,0.10);
+            max-width: 360px;
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            aspect-ratio: unset;
+            background: #f8f8f8;
+        }
+        @media (max-width: 900px) {
+            .project-gallery-wrapper {
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+            }
+            .project-gallery {
+                max-width: 100%;
+            }
+            .project-gallery-mobile {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 600px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .project-gallery img {
+                max-width: 100%;
+            }
+            .project-gallery-mobile img {
+                max-width: 100%;
+            }
+        }
+        </style>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
