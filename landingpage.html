@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manik Shrestha – UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#272626;
+      --panel:#060606;
+      --ink:#ffffff;
+      --accent:#3700FF;
+      --link:#48A7FF;
+      --ring: rgba(55,0,255,0.10);
+      --sidebar-w: 297px;
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--ink); font-family:'Poppins',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.5; overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+    img{display:block; max-width:100%; height:auto}
+
+    /* Layout */
+    .app{min-height:100dvh; position:relative}
+    .glow{position:absolute; inset:auto auto 0 45%; width:498px; height:487px; background:var(--accent); filter:blur(334px); border-radius:9999px; opacity:.55; pointer-events:none}
+
+    .shell{display:grid; grid-template-columns: var(--sidebar-w) 1fr; gap:24px; max-width:1440px; margin:0 auto; padding:24px}
+
+    /* Sidebar */
+    .sidebar{
+      position:sticky; top:24px; align-self:start; height:fit-content; width:var(--sidebar-w);
+      background:var(--panel); border:2px solid rgba(6,3,112,0.06); border-radius:12px; padding:20px 20px; display:flex; flex-direction:column; gap:50px;
+    }
+    .me{display:flex; flex-direction:column; align-items:center; gap:12px}
+    .avatar{width:96px; height:96px; border-radius:9999px; background:#d9d9d9; overflow:hidden}
+    .who{display:flex; flex-direction:column; align-items:center}
+    .name{font-size:20px; font-weight:600}
+    .role{font-size:15px; font-weight:300; opacity:.95}
+    .mail{color:var(--link); font-size:14px; font-weight:400; margin-top:8px}
+
+    .nav{display:flex; flex-direction:column; gap:20px}
+    .nav a{display:flex; align-items:center; gap:5px; font-size:16px; padding:8px 10px; border-radius:10px; transition:all .2s ease}
+    .nav a strong{font-weight:100}
+    .nav a:hover{background:rgba(255,255,255,0.04); transform:translateX(2px)}
+
+    /* Main grid */
+    .main{display:flex ; flex-wrap:wrap; gap: 10px}
+
+    .card{background:var(--panel); border:2px solid var(--accent); border-radius:5px}
+    .card.soft{border-color:var(--ring)}
+
+    /* Hero cluster left */
+    .hero-cluster{width:550px; position:relative; display:flex; flex-wrap:wrap; gap: 10px}
+    .tile{width:264px; height:192px; background:var(--panel); border-radius:5px; display:grid; place-items:center}
+    .tile.corner{border-top-left-radius:20px; border:1px solid var(--ring)}
+    .tile.stat{border:2px solid var(--accent); padding:20px 75px}
+    .tile.center{border:2px solid var(--accent); padding:48px 62px; text-align:center}
+    .tile .big{font-size:48px; font-weight:600}
+    .tile .mid{font-size:27px; font-weight:300}
+    .tile .label{font-size:20px; font-weight:100}
+    .stamp{position:absolute; left:56px; top:50px; font-size:32px; font-weight:300; text-align:center}
+
+    /* About */
+    .about{width:500px; height:408px; padding:75px 21px; border-radius:5px; border-top-right-radius:20px}
+    .about p{font-size:18px; font-weight:300; margin:0 0 16px}
+    .cta{display:inline-flex; align-items:center; gap:6px; color:var(--link); font-size:20px; font-weight:300}
+    .cta .arrow{display:inline-block; width:12px; height:12px; border-right:2px solid var(--link); border-bottom:2px solid var(--link); transform:rotate(-45deg); margin-left:2px}
+    .cta:hover{filter:brightness(1.15); transform:translateX(2px)}
+
+    /* Featured */
+    .featured{width:553px; height:454px; padding:10px 14px; border-bottom-left-radius:20px; display:flex; justify-content:center; align-items:center}
+    .featured h3{font-size:36px; font-weight:300; text-align:center; margin:0}
+    .featured .head{display:flex; flex-direction:column; align-items:center; gap:6px; margin-bottom:10px}
+    .featured .viewall{display:inline-flex; align-items:center; gap:6px; color:var(--link); font-size:20px; font-weight:300}
+    .featured .shot{height:354px; border-radius:10px; overflow:hidden}
+
+    /* Tools ring */
+    .tools{width:553px; height:454px; position:relative; border-bottom-right-radius:20px}
+    .tools h3{position:absolute; left:21px; top:8px; font-size:36px; font-weight:300; margin:0}
+    .ring{position:absolute; border:0.5px solid #fff; border-radius:9999px; opacity:.8}
+    .r1{width:227px; height:227px; left:184px; top:108px}
+    .r2{width:281px; height:281px; left:157px; top:83px}
+    .r3{width:323px; height:323px; left:139px; top:65px}
+    .r4{width:369px; height:369px; left:113px; top:43px}
+    .tool-badge{position:absolute; display:grid; place-items:center; border-radius:9999px; background:#d9d9d9; border:1px solid #fff}
+    .tool-badge.sm{width:36px; height:36px; left:173px; top:178px}
+    .tool-badge.md{width:50px; height:50px; left:398px; top:272px}
+    .tool-badge.big{width:69px; height:69px; left:266px; top:186px; background:#8CFF00}
+    .tool-badge img{width:70%; height:70%; object-fit:contain; filter:drop-shadow(0 0 0 transparent)}
+
+    /* Sections for anchor targets */
+    section{scroll-margin-top:90px}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="glow" aria-hidden="true"></div>
+
+    <div class="shell">
+      <!-- Sidebar -->
+      <aside class="sidebar" role="navigation" aria-label="Sidebar">
+        <div class="me">
+          <div class="avatar"><img src="https://placehold.co/96x96" alt="Portrait of Manik Shrestha"></div>
+          <div class="who">
+            <div class="name">Manik Shrestha</div>
+            <div class="role">UI/UX Designer</div>
+            <a class="mail" href="mailto:manikshrestha@gmail.com">Manik Shrestha@gmail.com</a>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#home"><strong>Home</strong></a>
+          <a href="#projects">Project</a>
+          <a href="#video">Video</a>
+          <a href="#testimonial">Testimonial</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </aside>
+
+      <!-- Main -->
+      <main class="main">
+        <!-- Hero cluster left -->
+        <section id="home" class="hero-cluster" aria-label="Stats">
+          <div class="tile corner" aria-hidden="true"></div>
+          <div class="tile stat">
+            <div>
+              <div class="big" aria-label="One year">1 <span class="mid">years</span></div>
+              <div class="label">Learning Journey</div>
+            </div>
+          </div>
+          <div class="tile stat">
+            <div>
+              <div class="big" style="text-align:center">7+</div>
+              <div class="mid" style="text-align:center">project</div>
+            </div>
+          </div>
+          <div class="tile center">
+            <div>
+              <div class="big" style="font-size:32px">UI/UX<br><span class="mid" style="font-size:32px">Designer</span></div>
+            </div>
+          </div>
+          <div class="stamp">Master in <br>Figma</div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="card about" aria-label="About Manik">
+          <div>
+            <p>I’m Manik Shrestha, an early-career UI/UX designer with a passion for crafting intuitive digital experiences.
+              <br>Skilled in Figma, prototyping, and visual design, I transform concepts into engaging interfaces.
+              <br>My goal is to design products that not only work but also delight users through thoughtful, user-centered design.</p>
+            <a class="cta" href="#contact" aria-label="Jump to Contact">Get in touch <span class="arrow"></span></a>
+          </div>
+        </section>
+
+        <!-- Featured projects -->
+        <section id="projects" class="card featured" aria-label="Featured Projects">
+          <div style="width:411px; max-width:100%">
+            <div class="head">
+              <h3>Feature Projects</h3>
+              <a class="viewall" href="#projects-list">View all <span class="arrow"></span></a>
+            </div>
+            <div class="shot">
+              <img src="https://placehold.co/1200x800" alt="Featured project preview">
+            </div>
+          </div>
+        </section>
+
+        <!-- Tools ring -->
+        <section id="tools" class="card tools" aria-label="Tools I use">
+          <h3>Tools</h3>
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+          <div class="ring r4"></div>
+          <!-- Badges (use your own SVGs/logos later) -->
+          <div class="tool-badge big" title="Figma">
+            <img alt="Figma" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg">
+          </div>
+          <div class="tool-badge md" title="Adobe XD">
+            <img alt="Adobe" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Corporate_logo.svg">
+          </div>
+          <div class="tool-badge sm" title="Sketch">
+            <img alt="Sketch" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg">
+          </div>
+        </section>
+
+        <!-- Optional extra sections to anchor links nicely -->
+        <!-- <section id="video" class="card soft" style="padding:40px; width:100%">
+          <h3 style="margin:0 0 10px; font-weight:300">Video</h3>
+          <p style="margin:0; opacity:.85">Embed your prototype demos here (Loom, YouTube, or Figma embeds).</p>
+        </section>
+        <section id="testimonial" class="card soft" style="padding:40px; width:100%">
+          <h3 style="margin:0 0 10px; font-weight:300">Testimonial</h3>
+          <p style="margin:0; opacity:.85">“Working with Manik was a breeze — thoughtful, fast, and pixel-perfect.” — Happy Client</p>
+        </section>
+        <section id="contact" class="card soft" style="padding:40px; width:100%">
+          <h3 style="margin:0 0 10px; font-weight:300">Contact</h3>
+          <p style="margin:0 0 12px; opacity:.85">Email: <a class="mail" href="mailto:manikshrestha@gmail.com">manikshrestha@gmail.com</a></p>
+          <form onsubmit="event.preventDefault(); alert('Thanks! I\'ll get back to you.');" style="display:grid; gap:12px; max-width:520px">
+            <input required placeholder="Your name" style="padding:12px 14px; background:#111; border:1px solid #222; border-radius:10px; color:#fff">
+            <input required type="email" placeholder="Email" style="padding:12px 14px; background:#111; border:1px solid #222; border-radius:10px; color:#fff">
+            <textarea required placeholder="Message" rows="5" style="padding:12px 14px; background:#111; border:1px solid #222; border-radius:10px; color:#fff; resize:vertical"></textarea>
+            <button style="justify-self:start; padding:10px 16px; background:var(--accent); color:#fff; border:0; border-radius:10px; cursor:pointer; transition:transform .15s ease; font-weight:600">Send</button>
+          </form>
+        </section> -->
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // button micro-interaction
+    document.querySelectorAll('button').forEach(btn=>{
+      btn.addEventListener('mouseenter',()=>btn.style.transform='translateY(-1px)');
+      btn.addEventListener('mouseleave',()=>btn.style.transform='');
+    })
+  </script>
+</body>
+</html>

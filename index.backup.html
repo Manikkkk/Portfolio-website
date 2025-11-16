@@ -1098,297 +1098,353 @@
             </div>
         </section>
         
-        <!-- Portfolio Section - Creative Design -->
-        <section id="portfolio" class="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-lightGray via-white to-lightGray relative overflow-hidden" aria-label="Portfolio projects">
-            
-            <!-- Decorative Background Elements -->
-            <div class="absolute top-20 right-10 w-72 h-72 bg-secondary/5 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-            
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Portfolio Section - Responsive padding -->
+        <section id="portfolio" class="py-12 sm:py-16 md:py-20 lg:py-24 bg-lightGray" aria-label="Portfolio projects">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <!-- Section Heading with Creative Styling -->
-                <div class="text-center mb-16 animate-on-scroll opacity-0">
-                    <div class="inline-block mb-4">
-                        <span class="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-body font-medium">
-                            ✨ Featured Work
-                        </span>
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-darkGray mb-6">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Projects</span>
-                    </h2>
-                    <p class="text-base md:text-lg text-darkGray/70 font-body max-w-2xl mx-auto leading-relaxed">
-                        Transforming ideas into beautiful, user-centered digital experiences. Each project tells a unique story of innovation and design excellence.
-                    </p>
-                </div>
+                <!-- Section Heading - Responsive sizing -->
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading text-primary text-center mb-6 sm:mb-8 animate-on-scroll opacity-0 px-4">
+                    My Portfolio
+                </h2>
                 
-                <!-- Modern Filter Buttons -->
-                <div class="flex flex-wrap justify-center gap-3 mb-16 animate-on-scroll opacity-0" role="group" aria-label="Project category filters">
-                    <button class="filter-btn group px-6 py-3 min-h-[44px] rounded-xl font-body font-medium transition-all duration-300 bg-gradient-to-r from-secondary to-orange-500 text-white shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-secondary/50 flex items-center gap-2" 
+                <p class="text-base md:text-lg text-darkGray/80 font-body text-center mb-12 max-w-2xl mx-auto animate-on-scroll opacity-0">
+                    Explore my recent projects showcasing user-centered design solutions across various industries and platforms.
+                </p>
+                
+                <!-- Filter Buttons - Touch-friendly with 44x44px minimum -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12 animate-on-scroll opacity-0" role="group" aria-label="Project category filters">
+                    <button class="filter-btn px-6 py-3 min-h-[44px] rounded-full font-body font-medium transition-all duration-300 bg-secondary text-white shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-secondary/50 flex items-center" 
                             data-filter="all"
                             aria-label="Show all projects"
                             aria-pressed="true">
-                        <span>All Projects</span>
-                        <span class="text-xs opacity-75">(8)</span>
+                        All
                     </button>
-                    <button class="filter-btn group px-6 py-3 min-h-[44px] rounded-xl font-body font-medium transition-all duration-300 bg-white text-darkGray shadow-md hover:shadow-lg hover:scale-105 hover:bg-gradient-to-r hover:from-primary hover:to-blue-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 flex items-center gap-2" 
+                    <button class="filter-btn px-6 py-3 min-h-[44px] rounded-full font-body font-medium transition-all duration-300 bg-white text-darkGray shadow-md hover:shadow-lg hover:bg-secondary hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary/50 flex items-center" 
                             data-filter="ui-design"
                             aria-label="Show UI Design projects"
                             aria-pressed="false">
-                        <span>🎨 UI Design</span>
+                        UI Design
                     </button>
-                    <button class="filter-btn group px-6 py-3 min-h-[44px] rounded-xl font-body font-medium transition-all duration-300 bg-white text-darkGray shadow-md hover:shadow-lg hover:scale-105 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50 flex items-center gap-2" 
+                    <button class="filter-btn px-6 py-3 min-h-[44px] rounded-full font-body font-medium transition-all duration-300 bg-white text-darkGray shadow-md hover:shadow-lg hover:bg-secondary hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary/50 flex items-center" 
                             data-filter="ux-research"
                             aria-label="Show UX Research projects"
                             aria-pressed="false">
-                        <span>🔍 UX Research</span>
+                        UX Research
                     </button>
-                    <button class="filter-btn group px-6 py-3 min-h-[44px] rounded-xl font-body font-medium transition-all duration-300 bg-white text-darkGray shadow-md hover:shadow-lg hover:scale-105 hover:bg-gradient-to-r hover:from-green-500 hover:to-emerald-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 flex items-center gap-2" 
+                    <button class="filter-btn px-6 py-3 min-h-[44px] rounded-full font-body font-medium transition-all duration-300 bg-white text-darkGray shadow-md hover:shadow-lg hover:bg-secondary hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary/50 flex items-center" 
                             data-filter="prototypes"
                             aria-label="Show Prototype projects"
                             aria-pressed="false">
-                        <span>⚡ Prototypes</span>
+                        Prototypes
                     </button>
                 </div>
                 
-                <!-- Creative Bento Grid Layout -->
-                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 auto-rows-[280px]">
+                <!-- Projects Grid -->
+                <!-- 
+                    Performance Optimization Guide for Project Images:
                     
-                    <!-- Project Card 1 - LearnAxis (Large Featured) -->
-                    <article class="project-card group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer animate-on-scroll opacity-0 md:col-span-4 lg:col-span-4 md:row-span-2 relative" 
+                    1. Image Format: Use WebP with JPEG/PNG fallback
+                       <picture>
+                           <source srcset="project-400.webp 400w, project-600.webp 600w, project-800.webp 800w" type="image/webp">
+                           <img src="project-600.jpg" srcset="project-400.jpg 400w, project-600.jpg 600w, project-800.jpg 800w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="Project description" loading="lazy" decoding="async">
+                       </picture>
+                    
+                    2. Image Compression: Aim for 80-85% quality for JPEGs, optimize WebP
+                    3. Dimensions: Provide 400w, 600w, 800w variants
+                    4. Loading: All images use loading="lazy" for better performance
+                    5. Decoding: async decoding prevents blocking the main thread
+                -->
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    
+                    <!-- Project Card 1 -->
+                    <article class="project-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-103 cursor-pointer animate-on-scroll opacity-0" 
+        
                              data-category="ux-research"
                              style="animation-delay: 0.1s;"
                              role="article"
-                             aria-label="LearnAxis Education Platform"
+                             aria-label="E-commerce Mobile App design"
                              tabindex="0">
-                        <a href="learnAxis.html" class="block h-full">
-                            <div class="relative overflow-hidden h-full">
-                                <img src="assets/image/LearnAxis/main.png" 
-                                     alt="LearnAxis Education Platform showcase" 
-                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                     loading="lazy"
-                                     decoding="async">
-                                <!-- Gradient Overlay -->
-                                <div class="absolute inset-0 bg-gradient-to-t from-darkGray via-darkGray/60 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300"></div>
-                                
-                                <!-- Content Overlay -->
-                                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
-                                    <div class="mb-3">
-                                        <span class="px-4 py-1.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-body rounded-full shadow-lg">⭐ Featured Project</span>
-                                    </div>
-                                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-heading mb-3 group-hover:text-secondary transition-colors">LearnAxis</h3>
-                                    <p class="text-sm md:text-base text-white/90 font-body mb-4 line-clamp-2">
-                                        Modern online education platform with landing page and dashboard system for seamless learning experiences.
-                                    </p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-full">Figma</span>
-                                        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-full">UX Research</span>
-                                        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-full">UI Design</span>
-                                    </div>
-                                    <div class="flex items-center text-secondary font-body font-medium group-hover:gap-3 gap-2 transition-all">
-                                        <span>View Case Study</span>
-                                        <svg class="w-5 h-5 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                        </svg>
-                                    </div>
-                                </div>
+                        <div class="relative overflow-hidden">
+                            <img src="assets/image/LearnAxis/main.png" 
+                                 alt="E-commerce Mobile App design showcase" 
+                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                 loading="lazy"
+                                 decoding="async">
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <a href="learnAxis.html" class="text-center text-white">
+                                    <p class="text-lg font-heading mb-2">View Project</p>
+                                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
                             </div>
-                        </a>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-2">LearnAxis</h3>
+                            <p class="text-sm md:text-base text-darkGray/70 font-body mb-4">
+                                LearnAxis is a modern online educaiton platform consisting of a landing page and a dashboard system.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Figma</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">UX Research</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">UI Design</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Web</span>
+                            </div>
+                        </div>
                     </article>
                     
-                    <!-- Project Card 2 - Shambala Hotel (Tall) -->
-                    <article class="project-card group bg-gradient-to-br from-amber-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer animate-on-scroll opacity-0 border border-amber-100 md:col-span-2 lg:col-span-2 md:row-span-2" 
+                    <!-- Project Card 2 -->
+                    <article class="project-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-103 cursor-pointer animate-on-scroll opacity-0" 
                              data-category="ui-design"
                              style="animation-delay: 0.2s;"
                              role="article"
-                             aria-label="Shambala Luxury Hotel"
+                             aria-label="Shambala luxury Hotel"
                              tabindex="0">
-                        <a href="shambala-luxury-hotel.html" class="block h-full">
-                            <div class="relative overflow-hidden h-full">
-                                <img src="assets/image/Shambala Hotel webpage/first page.png" 
-                                     alt="Shambala Luxury Hotel design showcase" 
-                                     class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                                     loading="lazy"
-                                     decoding="async">
-                                <div class="absolute inset-0 bg-gradient-to-t from-amber-900/80 via-transparent to-transparent"></div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="px-3 py-1.5 bg-yellow-500/90 backdrop-blur-sm text-white text-xs font-body rounded-full shadow-lg">✨ Luxury</span>
-                                </div>
-                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 class="text-xl md:text-2xl font-heading mb-2 group-hover:text-yellow-300 transition-colors">Shambala Luxury Hotel</h3>
-                                    <p class="text-sm text-white/90 font-body mb-3 line-clamp-2">
-                                        Premium hospitality UI with elegant booking system.
-                                    </p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-lg">Adobe XD</span>
-                                        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-lg">UI Design</span>
-                                    </div>
-                                </div>
+                        <div class="relative overflow-hidden">
+                            <img src="assets/image/Shambala Hotel webpage/first page.png" 
+                                 alt="Healthcare Dashboard design showcase" 
+                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                 loading="lazy"
+                                 decoding="async">
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <a href="shambala-luxury-hotel.html" class="text-center text-white">
+                                    <p class="text-lg font-heading mb-2">View Project</p>
+                                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
                             </div>
-                        </a>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-2">Shambala Luxury Hotel</h3>
+                            <p class="text-sm md:text-base text-darkGray/70 font-body mb-4">
+                                Welcoming hotel banner,room types, booking section and featured offers, Modern hospitality UI.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Adobe XD</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">UI Design</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Web</span>
+                            </div>
+                        </div>
                     </article>
                     
-                    <!-- Project Card 3 - Movie Booking (Wide) -->
-                    <article class="project-card group bg-gradient-to-br from-red-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer animate-on-scroll opacity-0 border border-red-100 md:col-span-2 lg:col-span-3" 
+                    <!-- Project Card 3 -->
+                    <article class="project-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-103 cursor-pointer animate-on-scroll opacity-0" 
                              data-category="prototypes"
                              style="animation-delay: 0.3s;"
                              role="article"
                              aria-label="Movie Ticket Booking Platform"
                              tabindex="0">
-                        <a href="movie-ticket-booking.html" class="block h-full">
-                            <div class="relative overflow-hidden h-full">
-                                <img src="assets/image/BSR Movie Ticket Booking/movie.png" 
-                                     alt="Movie Ticket Booking Platform showcase" 
-                                     class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                                     loading="lazy"
-                                     decoding="async">
-                                <div class="absolute inset-0 bg-gradient-to-r from-red-900/70 via-transparent to-transparent"></div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="px-3 py-1.5 bg-red-500/90 backdrop-blur-sm text-white text-xs font-body rounded-full shadow-lg">🎬 Cinema</span>
-                                </div>
-                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 class="text-xl md:text-2xl font-heading mb-2 group-hover:text-red-300 transition-colors">Movie Ticket Booking</h3>
-                                    <p class="text-sm text-white/90 font-body mb-3 line-clamp-1">
-                                        Responsive platform with genre filters and seamless booking.
-                                    </p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-lg">Figma</span>
-                                        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-lg">Prototype</span>
-                                    </div>
-                                </div>
+                        <div class="relative overflow-hidden">
+                            <img src="assets/image/BSR Movie Ticket Booking/movie.png" 
+                                 alt="Travel Booking Platform design showcase" 
+                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                 loading="lazy"
+                                 decoding="async">
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <a href="movie-ticket-booking.html" class="text-center text-white">
+                                    <p class="text-lg font-heading mb-2">View Project</p>
+                                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
                             </div>
-                        </a>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-2">Movie Ticket Booking Platform</h3>
+                            <p class="text-sm md:text-base text-darkGray/70 font-body mb-4">
+                                Responsive movie ticket booking platform, Desktop and mobile layouts, genre filters and clean UI.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Figma</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Prototyping</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Web</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Mobile</span>
+                            </div>
+                        </div>
                     </article>
                     
-                    <!-- Project Card 4 - Thar DriveMax (Wide Dark) -->
-                    <article class="project-card group bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer animate-on-scroll opacity-0 md:col-span-2 lg:col-span-3" 
+                    <!-- Project Card 4 -->
+                    <article class="project-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-103 cursor-pointer animate-on-scroll opacity-0" 
                              data-category="ui-design"
                              style="animation-delay: 0.4s;"
                              role="article"
-                             aria-label="Thar DriveMax Landing Page"
+                             aria-label="Banking App Redesign project"
                              tabindex="0">
-                        <a href="thar-drivemax.html" class="block h-full">
-                            <div class="relative overflow-hidden h-full">
-                                <img src="assets/image/Thar webpage/Thar1.png" 
-                                     alt="Thar DriveMax Landing Page showcase" 
-                                     class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                                     loading="lazy"
-                                     decoding="async">
-                                <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-transparent to-transparent"></div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="px-3 py-1.5 bg-red-600/90 backdrop-blur-sm text-white text-xs font-body rounded-full shadow-lg">🏎️ Auto</span>
-                                </div>
-                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 class="text-xl md:text-2xl font-heading mb-2 group-hover:text-red-400 transition-colors">Thar DriveMax</h3>
-                                    <p class="text-sm text-white/90 font-body mb-3 line-clamp-1">
-                                        Dark-themed landing page with bold visuals for automotive.
-                                    </p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-white/10 text-white text-xs font-body rounded-lg">Figma</span>
-                                        <span class="px-3 py-1 bg-red-500/20 text-red-300 text-xs font-body rounded-lg">UI Design</span>
-                                    </div>
-                                </div>
+                        <div class="relative overflow-hidden">
+                            <img src="assets/image/Thar webpage/Thar1.png" 
+                                 alt="Banking App Redesign showcase" 
+                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                 loading="lazy"
+                                 decoding="async">
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <a href="thar-drivemax.html" class="text-center text-white">
+                                    <p class="text-lg font-heading mb-2">View Project</p>
+                                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
                             </div>
-                        </a>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-2">Thar DriveMax Landing Page</h3>
+                            <p class="text-sm md:text-base text-darkGray/70 font-body mb-4">
+                                Dark-themed landing page for automotive accessories. Premium UI, bold visuals and seamless navigation.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Figma</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">UI Design</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Web</span>
+                            </div>
+                        </div>
                     </article>
                     
-                    <!-- Project Card 5 - Sneaker E-commerce (Square) -->
-                    <article class="project-card group bg-gradient-to-br from-green-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer animate-on-scroll opacity-0 border border-green-100 md:col-span-2 lg:col-span-2" 
+                    <!-- Project Card 5 -->
+                    <article class="project-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-103 cursor-pointer animate-on-scroll opacity-0" 
                              data-category="ui-design"
                              style="animation-delay: 0.5s;"
                              role="article"
                              aria-label="Sneaker E-commerce App"
                              tabindex="0">
-                        <a href="sneaker-ecommerce.html" class="block h-full">
-                            <div class="relative overflow-hidden h-full">
-                                <img src="assets/image/shoes mobile app.png" 
-                                     alt="Sneaker E-commerce App showcase" 
-                                     class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                                     loading="lazy"
-                                     decoding="async">
-                                <div class="absolute inset-0 bg-gradient-to-t from-green-900/70 via-transparent to-transparent"></div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="px-3 py-1.5 bg-green-500/90 backdrop-blur-sm text-white text-xs font-body rounded-full shadow-lg">👟 Shop</span>
-                                </div>
-                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 class="text-xl md:text-2xl font-heading mb-2 group-hover:text-green-300 transition-colors">Sneaker E-commerce</h3>
-                                    <p class="text-sm text-white/90 font-body mb-3 line-clamp-2">
-                                        Clean mobile interface with quick previews and smooth navigation.
-                                    </p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-lg">Figma</span>
-                                        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-lg">Mobile</span>
-                                    </div>
-                                </div>
+                        <div class="relative overflow-hidden">
+                            <img src="assets/image/shoes mobile app.png" 
+                                 alt="Food Delivery UX Study showcase" 
+                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                 loading="lazy"
+                                 decoding="async">
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <a href="sneaker-ecommerce.html" class="text-center text-white">
+                                    <p class="text-lg font-heading mb-2">View Project</p>
+                                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
                             </div>
-                        </a>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-2">Sneaker E-commerce App</h3>
+                            <p class="text-sm md:text-base text-darkGray/70 font-body mb-4">
+                                Clean mobile interface for sneaker e-commerce, Quick previews and smooth navigation.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Figma</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">UI Design</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Mobile</span>
+                            </div>
+                        </div>
                     </article>
                     
-                    <!-- Project Card 6 - Fitness Tracker (Coming Soon - Small) -->
-                    <article class="project-card group bg-gradient-to-br from-orange-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 cursor-not-allowed animate-on-scroll opacity-0 border-2 border-dashed border-orange-200 md:col-span-2 lg:col-span-2" 
+                    <!-- Project Card 6 -->
+                    <article class="project-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-103 cursor-pointer animate-on-scroll opacity-0" 
                              data-category="prototypes"
                              style="animation-delay: 0.6s;"
                              role="article"
-                             aria-label="Fitness Tracker App - Coming Soon"
+                             aria-label="Fitness Tracker App project"
                              tabindex="0">
-                        <div class="relative overflow-hidden h-full opacity-70">
+                        <div class="relative overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop" 
                                  alt="Fitness Tracker App design showcase" 
-                                 class="w-full h-full object-cover grayscale"
+                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                                  loading="lazy"
                                  decoding="async">
-                            <div class="absolute inset-0 bg-gradient-to-t from-orange-500/70 to-transparent flex flex-col items-center justify-center">
-                                <svg class="w-16 h-16 mb-3 animate-pulse text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <p class="text-white font-body font-medium text-lg">Coming Soon</p>
-                                <p class="text-white/80 font-body text-sm mt-2">Fitness Tracker App</p>
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <div class="text-center text-white">
+                                    <p class="text-lg font-heading mb-2">Coming Soon</p>
+                                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-2">Fitness Tracker App</h3>
+                            <p class="text-sm md:text-base text-darkGray/70 font-body mb-4">
+                                High-fidelity prototype with animated interactions for workout tracking and progress visualization.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Adobe XD</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Prototyping</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Mobile</span>
                             </div>
                         </div>
                     </article>
                     
-                    <!-- Project Card 7 - Real Estate (Coming Soon - Small) -->
-                    <article class="project-card group bg-gradient-to-br from-blue-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 cursor-not-allowed animate-on-scroll opacity-0 border-2 border-dashed border-blue-200 md:col-span-2 lg:col-span-2" 
+                    <!-- Project Card 7 -->
+                    <article class="project-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-103 cursor-pointer animate-on-scroll opacity-0" 
                              data-category="ui-design"
                              style="animation-delay: 0.7s;"
                              role="article"
-                             aria-label="Real Estate Platform - Coming Soon"
+                             aria-label="Real Estate Platform project"
                              tabindex="0">
-                        <div class="relative overflow-hidden h-full opacity-70">
+                        <div class="relative overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" 
                                  alt="Real Estate Platform design showcase" 
-                                 class="w-full h-full object-cover grayscale"
+                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                                  loading="lazy"
                                  decoding="async">
-                            <div class="absolute inset-0 bg-gradient-to-t from-blue-500/70 to-transparent flex flex-col items-center justify-center">
-                                <svg class="w-16 h-16 mb-3 animate-pulse text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <p class="text-white font-body font-medium text-lg">Coming Soon</p>
-                                <p class="text-white/80 font-body text-sm mt-2">Real Estate Platform</p>
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <div class="text-center text-white">
+                                    <p class="text-lg font-heading mb-2">Coming Soon</p>
+                                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-2">Real Estate Platform</h3>
+                            <p class="text-sm md:text-base text-darkGray/70 font-body mb-4">
+                                Elegant property listing interface with advanced search and virtual tour features.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Figma</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">UI Design</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Web</span>
                             </div>
                         </div>
                     </article>
                     
-                    <!-- Project Card 8 - Social Media (Coming Soon - Small) -->
-                    <article class="project-card group bg-gradient-to-br from-purple-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 cursor-not-allowed animate-on-scroll opacity-0 border-2 border-dashed border-purple-200 md:col-span-2 lg:col-span-2" 
+                    <!-- Project Card 8 -->
+                    <article class="project-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-103 cursor-pointer animate-on-scroll opacity-0" 
                              data-category="prototypes"
                              style="animation-delay: 0.8s;"
                              role="article"
-                             aria-label="Social Media Dashboard - Coming Soon"
+                             aria-label="Social Media Dashboard project"
                              tabindex="0">
-                        <div class="relative overflow-hidden h-full opacity-70">
+                        <div class="relative overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" 
                                  alt="Social Media Dashboard design showcase" 
-                                 class="w-full h-full object-cover grayscale"
+                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                                  loading="lazy"
                                  decoding="async">
-                            <div class="absolute inset-0 bg-gradient-to-t from-purple-500/70 to-transparent flex flex-col items-center justify-center">
-                                <svg class="w-16 h-16 mb-3 animate-pulse text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <p class="text-white font-body font-medium text-lg">Coming Soon</p>
-                                <p class="text-white/80 font-body text-sm mt-2">Social Media Dashboard</p>
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <div class="text-center text-white">
+                                    <p class="text-lg font-heading mb-2">Coming Soon</p>
+                                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-2">Social Media Dashboard</h3>
+                            <p class="text-sm md:text-base text-darkGray/70 font-body mb-4">
+                                Interactive prototype for managing multiple social accounts with analytics and scheduling.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Figma</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Prototyping</span>
+                                <span class="px-3 py-1 bg-lightGray text-darkGray text-xs font-body rounded-full">Web</span>
                             </div>
                         </div>
                     </article>
@@ -1585,22 +1641,7 @@
                     
                     <!-- Contact Form Column -->
                     <div class="animate-on-scroll opacity-0" data-animation="slide-left">
-                        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6" aria-label="Contact form">
-                            
-                            <!-- Web3Forms Access Key - Replace with your own key -->
-                            <input type="hidden" name="access_key" value="9c76683e-ad9a-4141-85a8-37d400edf0de">
-                            
-                            <!-- Optional: Redirect after submission -->
-                            <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                            
-                            <!-- Optional: Custom subject line -->
-                            <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
-                            
-                            <!-- Optional: From name -->
-                            <input type="hidden" name="from_name" value="Portfolio Contact Form">
-                            
-                            <!-- Honeypot Spam Protection -->
-                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <form id="contact-form" class="space-y-6" novalidate aria-label="Contact form">
                             
                             <!-- Name Field -->
                             <div>
@@ -1660,25 +1701,15 @@
                             <div>
                                 <button 
                                     type="submit" 
-                                    id="submit-btn"
                                     class="w-full px-8 py-4 min-h-[44px] bg-primary text-white font-body font-medium text-base sm:text-lg rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:bg-secondary hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-primary/50 active:scale-95 flex items-center justify-center"
                                     aria-label="Send message">
-                                    <span id="btn-text">Send Message</span>
-                                    <svg id="btn-loading" class="hidden animate-spin ml-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                    </svg>
+                                    Send Message
                                 </button>
                             </div>
                             
                             <!-- Success Message -->
                             <div id="form-success" class="hidden p-4 bg-green-100 border-2 border-green-500 text-green-700 rounded-xl" role="alert">
-                                <p class="font-body font-medium">✅ Thank you! Your message has been sent successfully.</p>
-                            </div>
-                            
-                            <!-- Error Message -->
-                            <div id="form-error" class="hidden p-4 bg-red-100 border-2 border-red-500 text-red-700 rounded-xl" role="alert">
-                                <p class="font-body font-medium">❌ Oops! Something went wrong. Please try again.</p>
+                                <p class="font-body font-medium">Thank you! Your message has been sent successfully.</p>
                             </div>
                             
                         </form>
@@ -1907,7 +1938,6 @@
     <script src="scripts/slider.js"></script>
     <script src="scripts/smooth-scroll.js"></script>
     <script src="scripts/project-navigation.js"></script>
-    <script src="scripts/contact-form.js"></script>
     
     <!-- Initialize Feather Icons -->
     <script>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sneaker E-commerce App - UI/UX Design Project by Manik Shrestha">
+    <title>Sneaker E-commerce App | Manik Shrestha</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#F59E0B',
+                        lightGray: '#F3F4F6',
+                        darkGray: '#111827',
+                        sneaker: '#10B981',
+                    },
+                    fontFamily: {
+                        heading: ['Poppins', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .sneaker-gradient {
+            background: linear-gradient(135deg, #10B981 0%, #1E3A8A 50%, #F59E0B 100%);
+        }
+        
+        .image-hover {
+            transition: all 0.4s ease;
+        }
+        
+        .image-hover:hover {
+            transform: translateY(-10px) rotate(-2deg);
+            box-shadow: 0 30px 60px rgba(16, 185, 129, 0.3);
+        }
+        
+        .phone-mockup {
+            border-radius: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="bg-white text-darkGray">
+    
+    <!-- Navigation -->
+    <header>
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16 md:h-20">
+                    
+                    <!-- Back Button -->
+                    <a href="index.html#portfolio" class="flex items-center text-darkGray hover:text-sneaker transition-colors duration-300 group">
+                        <svg class="w-6 h-6 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        <span class="font-body font-medium">Back to Portfolio</span>
+                    </a>
+                    
+                    <!-- Logo/Name -->
+                    <a href="index.html" class="text-xl md:text-2xl font-heading text-secondary hover:text-primary transition-colors duration-300">
+                        Manik Shrestha
+                    </a>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="pt-20">
+        
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] md:h-[70vh] overflow-hidden">
+            <div class="absolute inset-0 sneaker-gradient opacity-90"></div>
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'80\' height=\'80\' viewBox=\'0 0 80 80\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z\' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                <div class="fade-in">
+                    <div class="inline-block px-4 py-2 bg-sneaker/30 backdrop-blur-sm rounded-full mb-4">
+                        <span class="text-white font-body text-sm">👟 Mobile E-commerce</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading text-white mb-6">
+                        Sneaker E-commerce App
+                    </h1>
+                    <p class="text-lg md:text-xl text-white/90 font-body max-w-3xl mx-auto mb-8">
+                        Clean mobile interface for sneaker e-commerce with quick previews and smooth navigation. Shop the latest kicks with style.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="px-5 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-body rounded-full border border-white/30">Figma</span>
+                        <span class="px-5 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-body rounded-full border border-white/30">UI Design</span>
+                        <span class="px-5 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-body rounded-full border border-white/30">Mobile</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Overview -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    
+                    <!-- Quick Info Cards -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 fade-in">
+                        <div class="bg-gradient-to-br from-sneaker to-green-700 rounded-2xl p-6 text-white text-center">
+                            <div class="text-3xl mb-2">👟</div>
+                            <h3 class="text-xs md:text-sm font-body mb-1 opacity-90">Industry</h3>
+                            <p class="text-base md:text-lg font-heading">Fashion</p>
+                        </div>
+                       
+                        <div class="bg-gradient-to-br from-secondary to-orange-600 rounded-2xl p-6 text-white text-center">
+                            <div class="text-3xl mb-2">🎨</div>
+                            <h3 class="text-xs md:text-sm font-body mb-1 opacity-90">Role</h3>
+                            <p class="text-base md:text-lg font-heading">UI Designer</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl p-6 text-white text-center">
+                            <div class="text-3xl mb-2">📱</div>
+                            <h3 class="text-xs md:text-sm font-body mb-1 opacity-90">Platform</h3>
+                            <p class="text-base md:text-lg font-heading">Mobile</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured Image -->
+                    <div class="mb-16 fade-in flex justify-center">
+                        <div class="max-w-md">
+                            <img src="assets/image/shoes mobile app.png" 
+                                 alt="Sneaker E-commerce App Design" 
+                                 class="w-full h-auto phone-mockup image-hover">
+                        </div>
+                    </div>
+                    
+                    <!-- Project Description -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                        <div class="fade-in">
+                            <h2 class="text-3xl md:text-4xl font-heading text-primary mb-6">Project Overview</h2>
+                            <p class="text-base md:text-lg text-darkGray/80 font-body leading-relaxed mb-4">
+                                This sneaker e-commerce mobile app was designed to provide sneakerheads with a seamless shopping experience. The interface focuses on showcasing products beautifully while maintaining quick navigation and easy checkout.
+                            </p>
+                            <p class="text-base md:text-lg text-darkGray/80 font-body leading-relaxed">
+                                The clean, modern design emphasizes product imagery and uses subtle animations to create an engaging browsing experience that converts visitors into customers.
+                            </p>
+                        </div>
+                        
+                        <div class="fade-in">
+                            <h2 class="text-3xl md:text-4xl font-heading text-primary mb-6">Design Features</h2>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-10 h-10 bg-sneaker/20 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-sneaker text-xl">✓</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-heading text-darkGray mb-1">Clean Interface</h3>
+                                        <p class="text-darkGray/70 font-body text-sm">Minimalist design that puts products front and center</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-10 h-10 bg-sneaker/20 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-sneaker text-xl">✓</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-heading text-darkGray mb-1">Quick Preview</h3>
+                                        <p class="text-darkGray/70 font-body text-sm">Instant product details without leaving the browse page</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-10 h-10 bg-sneaker/20 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-sneaker text-xl">✓</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-heading text-darkGray mb-1">Smooth Navigation</h3>
+                                        <p class="text-darkGray/70 font-body text-sm">Intuitive flow from discovery to purchase</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Key Features -->
+                    <div class="mb-16 fade-in">
+                        <h2 class="text-3xl md:text-4xl font-heading text-primary mb-8 text-center">Key Features</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            
+                            <div class="bg-gradient-to-br from-sneaker/10 to-green-100 rounded-2xl p-8 hover:shadow-xl transition-all hover:-translate-y-1">
+                                <div class="w-14 h-14 bg-gradient-to-br from-sneaker to-green-700 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-feather="shopping-bag" class="text-white" style="width: 28px; height: 28px;"></i>
+                                </div>
+                                <h3 class="text-xl font-heading text-darkGray mb-3">Product Gallery</h3>
+                                <p class="text-darkGray/70 font-body">High-quality images with zoom and 360° view capabilities</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-primary/10 to-blue-100 rounded-2xl p-8 hover:shadow-xl transition-all hover:-translate-y-1">
+                                <div class="w-14 h-14 bg-gradient-to-br from-primary to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-feather="heart" class="text-white" style="width: 28px; height: 28px;"></i>
+                                </div>
+                                <h3 class="text-xl font-heading text-darkGray mb-3">Wishlist</h3>
+                                <p class="text-darkGray/70 font-body">Save favorite sneakers for later with one tap</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-secondary/10 to-orange-100 rounded-2xl p-8 hover:shadow-xl transition-all hover:-translate-y-1">
+                                <div class="w-14 h-14 bg-gradient-to-br from-secondary to-orange-600 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-feather="search" class="text-white" style="width: 28px; height: 28px;"></i>
+                                </div>
+                                <h3 class="text-xl font-heading text-darkGray mb-3">Smart Search</h3>
+                                <p class="text-darkGray/70 font-body">Filter by brand, size, color, and price range</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-8 hover:shadow-xl transition-all hover:-translate-y-1">
+                                <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-feather="credit-card" class="text-white" style="width: 28px; height: 28px;"></i>
+                                </div>
+                                <h3 class="text-xl font-heading text-darkGray mb-3">Easy Checkout</h3>
+                                <p class="text-darkGray/70 font-body">Secure payment with saved cards and addresses</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-red-100 to-rose-100 rounded-2xl p-8 hover:shadow-xl transition-all hover:-translate-y-1">
+                                <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-feather="bell" class="text-white" style="width: 28px; height: 28px;"></i>
+                                </div>
+                                <h3 class="text-xl font-heading text-darkGray mb-3">Drop Alerts</h3>
+                                <p class="text-darkGray/70 font-body">Get notified about new releases and restocks</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-indigo-100 to-blue-100 rounded-2xl p-8 hover:shadow-xl transition-all hover:-translate-y-1">
+                                <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-feather="user" class="text-white" style="width: 28px; height: 28px;"></i>
+                                </div>
+                                <h3 class="text-xl font-heading text-darkGray mb-3">User Profile</h3>
+                                <p class="text-darkGray/70 font-body">Track orders, manage addresses, and view history</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Design Showcase -->
+                   <div class="mb-12 fade-in">
+                        <h2 class="text-2xl md:text-3xl font-heading text-primary mb-6">Design Showcase</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 image-gallery">
+                            <img src="assets/image/E-commerce shoes/shoes first page.png" 
+                                 alt="LearnAxis Dashboard" 
+                                 class="w-half h-auto rounded-xl shadow-lg"
+                                 loading="lazy">
+                            <img src="assets/image/E-commerce shoes/shoes second page.png" 
+                                 alt="Course Interface" 
+                                 class="w-half h-auto rounded-xl shadow-lg"
+                                 loading="lazy">                       
+                        </div>
+                    </div>
+                    <!-- Impact Section -->
+                    <div class="bg-gradient-to-br from-sneaker via-green-600 to-primary rounded-3xl p-12 text-white text-center fade-in">
+                        <h2 class="text-3xl md:text-4xl font-heading mb-6">Design Impact</h2>
+                        <p class="text-lg md:text-xl font-body mb-8 max-w-3xl mx-auto opacity-90">
+                            A modern mobile shopping experience that makes browsing and buying sneakers effortless and enjoyable for sneaker enthusiasts.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                            <div>
+                                <div class="text-4xl md:text-5xl font-heading mb-2">Clean</div>
+                                <p class="font-body opacity-90">Interface Design</p>
+                            </div>
+                            <div>
+                                <div class="text-4xl md:text-5xl font-heading mb-2">Fast</div>
+                                <p class="font-body opacity-90">Navigation</p>
+                            </div>
+                            <div>
+                                <div class="text-4xl md:text-5xl font-heading mb-2">Smooth</div>
+                                <p class="font-body opacity-90">User Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-16 border-t border-lightGray mt-16 fade-in">
+                        <a href="index.html#portfolio" class="inline-flex items-center text-darkGray hover:text-secondary transition-colors duration-300 font-body font-medium">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                            </svg>
+                            Back to All Projects
+                        </a>
+                        
+                        <a href="index.html#contact" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-sneaker to-green-700 text-white font-body font-medium rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                            Let's Collaborate
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-darkGray text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-white/70 font-body">
+                    © 2024 Manik Shrestha. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Initialize Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+    
+</body>
+</html>

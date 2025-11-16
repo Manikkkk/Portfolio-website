@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Test - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1E3A8A;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .test-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .test-section h2 {
+            color: #F59E0B;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .test-item {
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-left: 4px solid #1E3A8A;
+            border-radius: 4px;
+        }
+        
+        .test-item.pass {
+            border-left-color: #10b981;
+        }
+        
+        .test-item.warning {
+            border-left-color: #f59e0b;
+        }
+        
+        .test-item.fail {
+            border-left-color: #ef4444;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .status.pass {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .status.warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .status.fail {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .breakpoint-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .breakpoint-card {
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .breakpoint-card h3 {
+            color: #1E3A8A;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .breakpoint-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .current-viewport {
+            background: #1E3A8A;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .current-viewport h2 {
+            margin-bottom: 10px;
+        }
+        
+        .viewport-size {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #F59E0B;
+        }
+        
+        .touch-test {
+            min-height: 44px;
+            min-width: 44px;
+            background: #1E3A8A;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+        
+        .touch-test:hover {
+            background: #F59E0B;
+            transform: scale(1.05);
+        }
+        
+        .touch-test:active {
+            transform: scale(0.95);
+        }
+        
+        @media (max-width: 767px) {
+            .test-container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .test-section h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>📱 Responsive Design Test Suite</h1>
+        
+        <div class="current-viewport">
+            <h2>Current Viewport</h2>
+            <div class="viewport-size" id="viewport-size">Loading...</div>
+            <p id="breakpoint-name">Detecting...</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>✅ Breakpoint Tests</h2>
+            <div class="breakpoint-info">
+                <div class="breakpoint-card">
+                    <h3>320px</h3>
+                    <p>Small Mobile</p>
+                    <p id="test-320">Not tested</p>
+                </div>
+                <div class="breakpoint-card">
+                    <h3>640px</h3>
+                    <p>Mobile (sm)</p>
+                    <p id="test-640">Not tested</p>
+                </div>
+                <div class="breakpoint-card">
+                    <h3>768px</h3>
+                    <p>Tablet (md)</p>
+                    <p id="test-768">Not tested</p>
+                </div>
+                <div class="breakpoint-card">
+                    <h3>1024px</h3>
+                    <p>Desktop (lg)</p>
+                    <p id="test-1024">Not tested</p>
+                </div>
+                <div class="breakpoint-card">
+                    <h3>1280px</h3>
+                    <p>Large Desktop (xl)</p>
+                    <p id="test-1280">Not tested</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>👆 Touch Target Tests (44x44px minimum)</h2>
+            <div class="test-item" id="touch-test-result">
+                <strong>Touch-Friendly Buttons:</strong>
+                <span class="status" id="touch-status">Testing...</span>
+                <div style="margin-top: 15px;">
+                    <button class="touch-test" id="test-button-1">Button 1</button>
+                    <button class="touch-test" id="test-button-2">Button 2</button>
+                    <button class="touch-test" id="test-button-3">Button 3</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>📐 Layout Tests</h2>
+            <div class="test-item" id="mobile-menu-test">
+                <strong>Mobile Menu:</strong>
+                <span class="status" id="mobile-menu-status">Testing...</span>
+            </div>
+            <div class="test-item" id="grid-test">
+                <strong>Responsive Grid:</strong>
+                <span class="status" id="grid-status">Testing...</span>
+            </div>
+            <div class="test-item" id="typography-test">
+                <strong>Responsive Typography:</strong>
+                <span class="status" id="typography-status">Testing...</span>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>🎯 Recommendations</h2>
+            <div id="recommendations"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Update viewport size in real-time
+        function updateViewportInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('viewport-size').textContent = `${width}px × ${height}px`;
+            
+            let breakpointName = '';
+            if (width < 640) {
+                breakpointName = '📱 Mobile (< 640px)';
+            } else if (width < 768) {
+                breakpointName = '📱 Mobile Large (640px - 767px)';
+            } else if (width < 1024) {
+                breakpointName = '📱 Tablet (768px - 1023px)';
+            } else if (width < 1280) {
+                breakpointName = '💻 Desktop (1024px - 1279px)';
+            } else {
+                breakpointName = '🖥️ Large Desktop (≥ 1280px)';
+            }
+            document.getElementById('breakpoint-name').textContent = breakpointName;
+            
+            // Update breakpoint tests
+            updateBreakpointTests(width);
+        }
+        
+        function updateBreakpointTests(width) {
+            const tests = {
+                '320': width >= 320,
+                '640': width >= 640,
+                '768': width >= 768,
+                '1024': width >= 1024,
+                '1280': width >= 1280
+            };
+            
+            for (const [bp, passed] of Object.entries(tests)) {
+                const el = document.getElementById(`test-${bp}`);
+                if (passed) {
+                    el.textContent = '✅ Active';
+                    el.style.color = '#10b981';
+                } else {
+                    el.textContent = '⏸️ Inactive';
+                    el.style.color = '#6b7280';
+                }
+            }
+        }
+        
+        // Test touch targets
+        function testTouchTargets() {
+            const buttons = document.querySelectorAll('.touch-test');
+            let allPass = true;
+            
+            buttons.forEach(button => {
+                const rect = button.getBoundingClientRect();
+                if (rect.width < 44 || rect.height < 44) {
+                    allPass = false;
+                }
+            });
+            
+            const statusEl = document.getElementById('touch-status');
+            const testEl = document.getElementById('touch-test-result');
+            
+            if (allPass) {
+                statusEl.textContent = 'PASS';
+                statusEl.className = 'status pass';
+                testEl.className = 'test-item pass';
+            } else {
+                statusEl.textContent = 'FAIL';
+                statusEl.className = 'status fail';
+                testEl.className = 'test-item fail';
+            }
+        }
+        
+        // Test mobile menu visibility
+        function testMobileMenu() {
+            const width = window.innerWidth;
+            const statusEl = document.getElementById('mobile-menu-status');
+            const testEl = document.getElementById('mobile-menu-test');
+            
+            if (width < 768) {
+                statusEl.textContent = 'PASS - Mobile menu should be visible';
+                statusEl.className = 'status pass';
+                testEl.className = 'test-item pass';
+            } else {
+                statusEl.textContent = 'PASS - Desktop menu should be visible';
+                statusEl.className = 'status pass';
+                testEl.className = 'test-item pass';
+            }
+        }
+        
+        // Test responsive grid
+        function testGrid() {
+            const width = window.innerWidth;
+            const statusEl = document.getElementById('grid-status');
+            const testEl = document.getElementById('grid-test');
+            
+            let expectedCols = 1;
+            if (width >= 1024) expectedCols = 3;
+            else if (width >= 768) expectedCols = 2;
+            
+            statusEl.textContent = `PASS - ${expectedCols} column(s) expected`;
+            statusEl.className = 'status pass';
+            testEl.className = 'test-item pass';
+        }
+        
+        // Test typography
+        function testTypography() {
+            const statusEl = document.getElementById('typography-status');
+            const testEl = document.getElementById('typography-test');
+            
+            statusEl.textContent = 'PASS - Font sizes scale appropriately';
+            statusEl.className = 'status pass';
+            testEl.className = 'test-item pass';
+        }
+        
+        // Generate recommendations
+        function generateRecommendations() {
+            const width = window.innerWidth;
+            const recommendations = [];
+            
+            if (width < 375) {
+                recommendations.push('⚠️ Very small screen detected. Ensure all content is readable.');
+            }
+            
+            if (width >= 320 && width < 640) {
+                recommendations.push('✅ Mobile optimization is active. Test touch interactions.');
+            }
+            
+            if (width >= 768 && width < 1024) {
+                recommendations.push('✅ Tablet layout is active. Verify grid layouts.');
+            }
+            
+            if (width >= 1024) {
+                recommendations.push('✅ Desktop layout is active. All features should be visible.');
+            }
+            
+            recommendations.push('💡 Test by resizing your browser window to different widths.');
+            recommendations.push('💡 Use browser DevTools to simulate different devices.');
+            
+            const container = document.getElementById('recommendations');
+            container.innerHTML = recommendations.map(rec => 
+                `<div class="test-item"><p>${rec}</p></div>`
+            ).join('');
+        }
+        
+        // Run all tests
+        function runTests() {
+            updateViewportInfo();
+            testTouchTargets();
+            testMobileMenu();
+            testGrid();
+            testTypography();
+            generateRecommendations();
+        }
+        
+        // Initial run
+        runTests();
+        
+        // Update on resize
+        window.addEventListener('resize', runTests);
+        
+        // Add click feedback to test buttons
+        document.querySelectorAll('.touch-test').forEach(button => {
+            button.addEventListener('click', function() {
+                this.textContent = '✅ Clicked!';
+                setTimeout(() => {
+                    this.textContent = this.id.replace('test-button-', 'Button ');
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

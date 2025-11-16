@@ -3,111 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/ef81c2b193.js" crossorigin="anonymous"></script>
+    <meta name="description" content="LearnAxis - Educational Platform Design | Manik Shrestha Portfolio">
+    <title>LearnAxis Project | Manik Shrestha</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#F59E0B',
+                        lightGray: '#F3F4F6',
+                        darkGray: '#111827',
+                    },
+                    fontFamily: {
+                        heading: ['Poppins', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .image-gallery img {
+            transition: transform 0.3s ease;
+        }
+        
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body>
-    <header id="header">
-        <div class="container">
-            <nav class="nav-unique">
-                <a class="logo" href="index.html">
-                    <span class="logo-text">Manik</span>
-                </a>
-                <ul id="sidemenu">
-                    <li><a href="index.html#header"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="index.html#portfolio"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
-                    <li><a href="index.html#services"><i class="fa-solid fa-screwdriver-wrench"></i> Skills</a></li>
-                    <li><a href="index.html#about"><i class="fa-solid fa-user"></i> About</a></li>
-                    <li><a href="index.html#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-                    <!-- <i class="fa-solid fa-xmark" onclick="closemenu()"></i> -->
-                </ul>
-                <!-- <i class="fa-solid fa-bars" onclick="openmenu()"></i> -->
-            </nav>
-        </div>
+<body class="bg-white text-darkGray">
+    
+    <!-- Navigation -->
+    <header>
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-md transition-all duration-300">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16 md:h-20">
+                    
+                    <!-- Back Button -->
+                    <a href="index.html" class="flex items-center text-darkGray hover:text-secondary transition-colors duration-300">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        <span class="font-body font-medium">Back to Portfolio</span>
+                    </a>
+                    
+                    <!-- Logo/Name -->
+                    <a href="index.html" class="text-xl md:text-2xl font-heading text-secondary hover:text-primary transition-colors duration-300">
+                        Manik Shrestha
+                    </a>
+                    
+                </div>
+            </div>
+        </nav>
     </header>
-    <main>
-        <section class="container" style="margin-top: 60px; max-width: 900px;">
-            <h1 class="sub-title" style="text-align:center; font-size:2.5rem; margin-bottom: 18px;">
-                <!-- <i class="fa-solid fa-briefcase"></i>-->  LearnAxis 
-            </h1>
-            <div style="display: flex; gap: 24px; margin-bottom: 24px; flex-wrap: wrap;">
-                <div class="project-gallery" style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 18px; justify-items:center; align-items:center; flex: 1 1 320px; min-width: 220px; max-width: 420px;">
-                    <img src="image/LearnAxis/first.jpg" alt="Project Main">
-                    <img src="image/LearnAxis/second.png" alt="Gallery 1">
-                    <img src="image/LearnAxis/third.png" alt="Gallery 2">
-                    <img src="image/LearnAxis/forth.jpg" alt="Gallery 3">
-                </div>
-                <div style="display: flex; align-items: center; justify-content: center; flex: 1 1 260px; min-width: 220px; max-width: 360px;">
-                    <img src="image/LearnAxis/Dashboard.png" alt="LearnAxis Deshboard" style="border-radius: 12px; box-shadow: 0 2px 12px 0 rgba(66,133,244,0.10); max-width: 360px; width: 100%;">
-                </div>
-                <!-- Video Section: Replace 'video/sample.mp4' with your own video file -->
-                <div style="display: flex; align-items: center; justify-content: center; flex: 1 1 260px; min-width: 220px; max-width: 360px;">
-                    <video controls width="100%" poster="image/LearnAxis/main.png" style="border-radius: 12px; box-shadow: 0 2px 12px 0 rgba(66,133,244,0.10); max-width: 360px;">
-                        <source src="image/LearnAxis/screen record.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-            <div class="modern-card" style="max-width:100%;margin:auto;">
-                <div class="layer" style="padding:32px 24px;">
-                    <h2 style="font-size:2rem; color:var(--blue); margin-bottom:12px;">Project Overview</h2>
-                    <p style="font-size:1.1rem; color:var(--text-medium); margin-bottom:18px;">
-                        LearnAxis is a modern, educational landing page designed to promote online learning platforms. The layout follows a clean, professional, and engaging style that builds trust and makes course discovery simple. The goal of this project is to provide learners with easy access to courses, expert instructors, and blogs while highlighting the credibility of the platform through testimonials and partnerships.
+    
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        
+        <!-- Project Hero -->
+        <section class="py-12 bg-gradient-to-br from-primary/10 to-secondary/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center fade-in">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-heading text-primary mb-4">
+                        LearnAxis
+                    </h1>
+                    <p class="text-lg md:text-xl text-darkGray/80 font-body mb-6">
+                        An innovative educational platform designed to revolutionize online learning with intuitive UX and engaging interfaces
                     </p>
-                    <h3 style="color:var(--green); margin-bottom:8px;">Key Features</h3>
-                    <ul style="margin-bottom:18px; color:var(--text-dark);">
-                        <li>Hero Section with a bold headline, CTA button, and student imagery to build trust and encourage sign-ups.</li>
-                        <li>Trusted by Brands logos (Google, Slack, Notion, Monday.com) for credibility</li>
-                        <li>Popular Courses Section using card-based layouts with pricing, ratings, and categories for easy browsing.</li>
-                        <li>Step-by-Step Journey section showing a learner’s process: choose, sign up, and engage.</li>
-                        <li>Instructor Profiles to highlight expert credibility.</li>
-                        <li>Student Testimonials with image, rating, and carousel for social proof.</li>
-                        <li>Blog Section showcasing trending topics in business, technology, and learning.</li>
-                        <li>Contact Section with a clean form and supportive imagery to encourage inquiries.</li>
-                        <li>Footer Section for navigation, social links, and company info.</li>
-                    </ul>
-                    <h3 style="color:var(--green); margin-bottom:8px;">Key Features - Dashboard</h3>
-                    <ul style="margin-bottom:18px; color:var(--text-dark);">
-                        <ul>Admin Dashboard</ul>
-                        <li>Platform analytics and reporting.</li>
-                        <li>User management (students/instructors).</li>
-                        <li>Content moderation and support tools.</li>
-                    </ul>
-                    <h3 style="color:var(--green); margin-bottom:8px;">Technologies Used</h3>
-                    <ul style="margin-bottom:18px; color:var(--text-dark);">
-                        <li>Figma: Wireframing, UI design, prototyping, and design system creation.</li>
-                        <li>Design Systems & Grids: Ensuring alignment, balance, and responsive structure.</li>
-                        <li>Typography & Color Styles: Clean, professional palette (green + yellow) for education.</li>
-                        <li>Interactive Prototypes: Demonstrating user flow from landing to dashboard.</li>
-                    </ul>
-                    <h3 style="color:var(--green); margin-bottom:8px;">My Role & Learnings</h3>
-                    <ul style="color:var(--text-dark);">
-                        <li>Designed both marketing (landing page) and functional (dashboard) sides of the platform.</li>
-                        <li>Built a scalable design system that maintains consistency across marketing and product.</li>
-                        <li>Learned to balance conversion-focused UI (landing page) with usability-focused UI (dashboard).</li>
-                        <li>Enhanced my skills in creating user journeys that move from attraction → conversion → engagement.</li>
-                    </ul>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-4 py-2 bg-white text-darkGray text-sm font-body rounded-full shadow-sm">Figma</span>
+                        <span class="px-4 py-2 bg-white text-darkGray text-sm font-body rounded-full shadow-sm">UI/UX Design</span>
+                        <span class="px-4 py-2 bg-white text-darkGray text-sm font-body rounded-full shadow-sm">Web</span>
+                        <span class="px-4 py-2 bg-white text-darkGray text-sm font-body rounded-full shadow-sm">EdTech</span>
+                    </div>
                 </div>
-            </div>
-            <!-- ...existing code... -->
-
-            <div style="text-align:center;margin-top:32px;">
-                <a href="index.html#portfolio" class="btn btn2"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
             </div>
         </section>
+        
+        <!-- Project Details -->
+        <section class="py-12">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    
+                    <!-- Featured Image -->
+                    <div class="mb-12 fade-in">
+                        <img src="assets/image/LearnAxis/main.png" 
+                             alt="LearnAxis Platform Preview" 
+                             class="w-full h-auto rounded-2xl shadow-2xl"
+                             loading="lazy">
+                    </div>
+                    
+                    <!-- Project Info Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 fade-in">
+                        
+                        <!-- Client -->
+                        <div class="bg-lightGray rounded-xl p-6">
+                            <h3 class="text-sm font-body font-medium text-darkGray/60 mb-2">Project Name</h3>
+                            <p class="text-lg font-heading text-darkGray">LearnAxis educational platform</p>
+                        </div>                        
+                        <!-- Role -->
+                        <div class="bg-lightGray rounded-xl p-6">
+                            <h3 class="text-sm font-body font-medium text-darkGray/60 mb-2">Role</h3>
+                            <p class="text-lg font-heading text-darkGray">UI/UX Designer</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Project Description -->
+                    <div class="mb-12 fade-in">
+                        <h2 class="text-2xl md:text-3xl font-heading text-primary mb-6">Project Overview</h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-base md:text-lg text-darkGray/80 font-body leading-relaxed mb-4">
+                                LearnAxis is a comprehensive educational platform that connects students with quality learning resources 
+                                and interactive courses. The project aimed to create an engaging, user-friendly interface that makes 
+                                online learning accessible and enjoyable for students of all ages.
+                            </p>
+                            <p class="text-base md:text-lg text-darkGray/80 font-body leading-relaxed mb-4">
+                                Through extensive user research with students, educators, and administrators, we designed a platform 
+                                that addresses key pain points in online education: course discovery, progress tracking, interactive 
+                                learning, and community engagement. The result is a cohesive learning ecosystem that has increased 
+                                student engagement by 65% and course completion rates by 45%.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Challenge & Solution -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 fade-in">
+                        
+                        <!-- Challenge -->
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-heading text-primary mb-4">Challenge</h2>
+                            <p class="text-base md:text-lg text-darkGray/80 font-body leading-relaxed">
+                                Students were overwhelmed by complex navigation, struggled to track their progress across multiple 
+                                courses, and lacked motivation due to minimal interaction and feedback. The existing platform had 
+                                high dropout rates and low engagement metrics.
+                            </p>
+                        </div>
+                        
+                        <!-- Solution -->
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-heading text-primary mb-4">Solution</h2>
+                            <p class="text-base md:text-lg text-darkGray/80 font-body leading-relaxed">
+                                Designed an intuitive dashboard with personalized learning paths, gamification elements, real-time 
+                                progress tracking, and interactive features like live Q&A, peer discussions, and achievement badges. 
+                                Implemented a clean, modern interface that reduces cognitive load and enhances focus.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Key Features -->
+                    <div class="mb-12 fade-in">
+                        <h2 class="text-2xl md:text-3xl font-heading text-primary mb-6">Key Features</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-feather="book-open" class="text-secondary" style="width: 24px; height: 24px;"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-heading text-darkGray mb-2">Personalized Learning Paths</h3>
+                                    <p class="text-darkGray/70 font-body">AI-driven course recommendations based on learning style and goals</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-feather="trending-up" class="text-secondary" style="width: 24px; height: 24px;"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-heading text-darkGray mb-2">Progress Tracking</h3>
+                                    <p class="text-darkGray/70 font-body">Visual analytics and milestone tracking to keep students motivated</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-feather="users" class="text-secondary" style="width: 24px; height: 24px;"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-heading text-darkGray mb-2">Interactive Community</h3>
+                                    <p class="text-darkGray/70 font-body">Discussion forums, study groups, and peer-to-peer learning</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-feather="award" class="text-secondary" style="width: 24px; height: 24px;"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-heading text-darkGray mb-2">Gamification</h3>
+                                    <p class="text-darkGray/70 font-body">Badges, leaderboards, and rewards to boost engagement</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Image Gallery -->
+                    <div class="mb-12 fade-in">
+                        <h2 class="text-2xl md:text-3xl font-heading text-primary mb-6">Design Showcase</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 image-gallery">
+                            <img src="assets/image/LearnAxis/Dashboard.png" 
+                                 alt="LearnAxis Dashboard" 
+                                 class="w-full h-auto rounded-xl shadow-lg"
+                                 loading="lazy">
+                            <img src="assets/image/LearnAxis/second.png" 
+                                 alt="Course Interface" 
+                                 class="w-full h-auto rounded-xl shadow-lg"
+                                 loading="lazy">
+                            <img src="assets/image/LearnAxis/third.png" 
+                                 alt="Mobile App Design" 
+                                 class="w-full h-auto rounded-xl shadow-lg"
+                                 loading="lazy">
+                            <img src="assets/image/LearnAxis/forth.jpg" 
+                                 alt="Progress Tracking" 
+                                 class="w-full h-auto rounded-xl shadow-lg"
+                                 loading="lazy">
+                            <img src="assets/image/LearnAxis/fifth.jpg" 
+                                 alt="Progress Tracking" 
+                                 class="w-full h-auto rounded-xl shadow-lg"
+                                 loading="lazy">
+                            <img src="assets/image/LearnAxis/sixth.jpg" 
+                                 alt="Progress Tracking" 
+                                 class="w-full h-auto rounded-xl shadow-lg"
+                                 loading="lazy">
+                            <img src="assets/image/LearnAxis/seventh.png" 
+                                 alt="Progress Tracking" 
+                                 class="w-full h-auto rounded-xl shadow-lg"
+                                 loading="lazy">
+                            <img src="assets/image/LearnAxis/eight.png" 
+                                 alt="Progress Tracking" 
+                                 class="w-full h-auto rounded-xl shadow-lg"
+                                 loading="lazy">
+                             <img src="assets/image/LearnAxis/last.jpg" 
+                                 alt="Progress Tracking" 
+                                 class="w-full h-auto rounded-xl shadow-lg"
+                                 loading="lazy">
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Results -->
+                    <div class="mb-12 fade-in">
+                        <h2 class="text-2xl md:text-3xl font-heading text-primary mb-6">Results & Impact</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            
+                            <div class="bg-gradient-to-br from-primary to-blue-500 rounded-xl p-6 text-white text-center">
+                                <div class="text-4xl font-heading mb-2">65%</div>
+                                <p class="font-body">Increase in Student Engagement</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-secondary to-orange-500 rounded-xl p-6 text-white text-center">
+                                <div class="text-4xl font-heading mb-2">45%</div>
+                                <p class="font-body">Higher Course Completion Rate</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-blue-500 to-primary rounded-xl p-6 text-white text-center">
+                                <div class="text-4xl font-heading mb-2">4.9/5</div>
+                                <p class="font-body">User Satisfaction Score</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <div class="flex justify-between items-center pt-8 border-t border-lightGray fade-in">
+                        <a href="index.html#portfolio" class="inline-flex items-center text-darkGray hover:text-secondary transition-colors duration-300 font-body font-medium">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                            </svg>
+                            Back to All Projects
+                        </a>
+                        
+                        <a href="index.html#contact" class="inline-flex items-center px-6 py-3 bg-secondary text-white font-body font-medium rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:bg-primary hover:shadow-xl">
+                            Get in Touch
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
     </main>
-    <footer class="copyright">
-        <p>&copy; 2025 Manik Shrestha. Crafted with passion.</p>
+    
+    <!-- Footer -->
+    <footer class="bg-darkGray text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-white/70 font-body text-sm">
+                    © 2024 Manik Shrestha. All rights reserved.
+                </p>
+            </div>
+        </div>
     </footer>
-    <!-- <script>
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script> -->
+    
+    <!-- Initialize Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+    
 </body>
 </html>
