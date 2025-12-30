@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BL Party Palace - Venue Booking Website & Admin Dashboard UI/UX Design Project by Manik Shrestha">
+    <title>BL Party Palace | Manik Shrestha</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1F2937',
+                        secondary: '#A6B800',
+                        lightGray: '#F3F4F6',
+                        darkGray: '#111827',
+                        gold: '#C9E100',
+                    },
+                    fontFamily: {
+                        heading: ['Poppins', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .luxury-gradient {
+            background: linear-gradient(135deg, #1F2937 0%, #A6B800 100%);
+        }
+        
+        .image-hover {
+            transition: all 0.4s ease;
+        }
+        
+        .image-hover:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-white text-darkGray">
+    
+    <!-- Navigation -->
+    <header>
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16 md:h-20">
+                    
+                    <!-- Back Button -->
+                    <a href="index.html#portfolio" class="flex items-center text-darkGray hover:text-secondary transition-colors duration-300 group">
+                        <svg class="w-6 h-6 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        <span class="font-body font-medium">Back to Portfolio</span>
+                    </a>
+                    
+                    <!-- Logo/Name -->
+                    <a href="index.html" class="text-xl md:text-2xl font-heading text-secondary hover:text-primary transition-colors duration-300">
+                        Manik Shrestha
+                    </a>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="pt-20">
+        
+        <!-- Hero Section with Parallax -->
+        <section class="relative h-[60vh] md:h-[70vh] overflow-hidden">
+            <div class="absolute inset-0 luxury-gradient opacity-90"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                <div class="fade-in">
+                    <div class="inline-block px-4 py-2 bg-gold/20 backdrop-blur-sm rounded-full mb-4">
+                        <span class="text-gold font-body text-sm">🎉 Event Venue & Dashboard Design</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading text-white mb-6">
+                        BL Party Palace
+                    </h1>
+                    <p class="text-lg md:text-xl text-white/90 font-body max-w-3xl mx-auto mb-8">
+                        A complete venue booking website and admin dashboard designed to manage weddings, receptions, parties, and corporate events efficiently.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="px-5 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-body rounded-full border border-white/30">Figma</span>
+                        <span class="px-5 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-body rounded-full border border-white/30">UI/UX Design</span>
+                        <span class="px-5 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-body rounded-full border border-white/30">Dashboard</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Overview -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    
+                    <!-- Quick Info Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16 fade-in">
+                        <div class="bg-gradient-to-br from-primary to-gray-600 rounded-2xl p-6 text-white text-center">
+                            <div class="text-3xl mb-2">🏛️</div>
+                            <h3 class="text-sm font-body mb-1 opacity-90">Industry</h3>
+                            <p class="text-lg font-heading">Event Venue</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-secondary to-green-600 rounded-2xl p-6 text-white text-center">
+                            <div class="text-3xl mb-2">🎨</div>
+                            <h3 class="text-sm font-body mb-1 opacity-90">Role</h3>
+                            <p class="text-lg font-heading">UI Designer</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-primary to-gray-600 rounded-2xl p-6 text-white text-center">
+                            <div class="text-3xl mb-2">📊</div>
+                            <h3 class="text-sm font-body mb-1 opacity-90">Platform</h3>
+                            <p class="text-lg font-heading">Dashboard</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-secondary to-green-600 rounded-2xl p-6 text-white text-center">
+                            <div class="text-3xl mb-2">💻</div>
+                            <h3 class="text-sm font-body mb-1 opacity-90">Type</h3>
+                            <p class="text-lg font-heading">Web Platform</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Small Photo Thumbnails -->
+                    <div class="mb-12 fade-in">
+                        <div class="grid grid-cols-0 md:grid-cols-1 gap-">
+                            <div class="relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer">
+                                <img src="assets/image/BL Party Palace/Desktop - 1.png"
+                                     alt="BL Party Palace Homepage" 
+                                     class="w-full h-80 object-cover object-top group-hover:scale-110 transition-transform duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Description -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                        <div class="fade-in">
+                            <h2 class="text-3xl md:text-4xl font-heading text-primary mb-6">Project Overview</h2>
+                            <p class="text-base md:text-lg text-darkGray/80 font-body leading-relaxed mb-4">
+                                BL Party Palace required a modern digital solution to promote their venue and manage event bookings efficiently. The project includes a public-facing website for customers and an internal admin dashboard for venue management.
+                            </p>
+                            <p class="text-base md:text-lg text-darkGray/80 font-body leading-relaxed">
+                                The design emphasizes elegant visual presentation, streamlined booking processes, and comprehensive event management capabilities that reflect the venue's premium positioning.
+                            </p>
+                        </div>
+                        
+                        <div class="fade-in">
+                            <h2 class="text-3xl md:text-4xl font-heading text-primary mb-6">Design Approach</h2>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-gold text-xl">✓</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-heading text-darkGray mb-1">Premium Visual Identity</h3>
+                                        <p class="text-darkGray/70 font-body text-sm">Elegant design with sophisticated color palette and typography</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-gold text-xl">✓</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-heading text-darkGray mb-1">Streamlined Booking Flow</h3>
+                                        <p class="text-darkGray/70 font-body text-sm">Clear enquiry process with intuitive navigation</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-gold text-xl">✓</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-heading text-darkGray mb-1">Data-Driven Dashboard</h3>
+                                        <p class="text-darkGray/70 font-body text-sm">Comprehensive admin interface with analytics and insights</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Key Features -->
+                    <div class="mb-16 fade-in">
+                        <h2 class="text-3xl md:text-4xl font-heading text-primary mb-8 text-center">Key Features</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            
+                            <div class="bg-lightGray rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                                <div class="w-14 h-14 bg-gradient-to-br from-primary to-gray-600 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-feather="home" class="text-white" style="width: 28px; height: 28px;"></i>
+                                </div>
+                                <h3 class="text-xl font-heading text-darkGray mb-3">Venue Website</h3>
+                                <p class="text-darkGray/70 font-body">Event listings, gallery showcase, booking CTA and streamlined enquiry flow</p>
+                            </div>
+                            
+                            <div class="bg-lightGray rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                                <div class="w-14 h-14 bg-gradient-to-br from-secondary to-green-600 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-feather="calendar" class="text-white" style="width: 28px; height: 28px;"></i>
+                                </div>
+                                <h3 class="text-xl font-heading text-darkGray mb-3">Booking Dashboard</h3>
+                                <p class="text-darkGray/70 font-body">Track bookings, revenue management, advance payments and status updates</p>
+                            </div>
+                            
+                            <div class="bg-lightGray rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                                <div class="w-14 h-14 bg-gradient-to-br from-gold to-yellow-600 rounded-xl flex items-center justify-center mb-4">
+                                    <i data-feather="bar-chart-2" class="text-white" style="width: 28px; height: 28px;"></i>
+                                </div>
+                                <h3 class="text-xl font-heading text-darkGray mb-3">Analytics & Insights</h3>
+                                <p class="text-darkGray/70 font-body">Comprehensive charts for booking trends and event performance breakdown</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Design Showcase - 2x3 Grid -->
+                    <div class="mb-16 fade-in">
+                        <h2 class="text-3xl md:text-4xl font-heading text-primary mb-8 text-center">Design Showcase</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6">
+                            <!-- Row 1 -->
+                            <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                                <img src="assets/image/BL Party Palace/About.png" 
+                                     alt="About Section" 
+                                     class="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p class="text-white font-body text-sm">About Section</p>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                                <img src="assets/image/BL Party Palace/Gallery.png" 
+                                     alt="Gallery Section" 
+                                     class="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p class="text-white font-body text-sm">Gallery</p>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                                <img src="assets/image/BL Party Palace/Services.png" 
+                                     alt="Services Section" 
+                                     class="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-gold/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p class="text-white font-body text-sm">Services</p>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                                <img src="assets/image/BL Party Palace/dashboard.png" 
+                                     alt="Admin Dashboard" 
+                                     class="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-blue-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p class="text-white font-body text-sm">Admin Dashboard</p>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                                <img src="assets/image/BL Party Palace/Reviews.png" 
+                                     alt="Reviews Section" 
+                                     class="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-green-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p class="text-white font-body text-sm">Reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Impact Section -->
+                    <div class="bg-gradient-to-br from-primary via-gray-600 to-secondary rounded-3xl p-12 text-white text-center fade-in">
+                        <h2 class="text-3xl md:text-4xl font-heading mb-6">Design Impact</h2>
+                        <p class="text-lg md:text-xl font-body mb-8 max-w-3xl mx-auto opacity-90">
+                            The solution provides BL Party Palace with a strong digital presence while simplifying internal operations through a clean, data-driven dashboard experience.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                            <div>
+                                <div class="text-4xl md:text-5xl font-heading mb-2">Professional</div>
+                                <p class="font-body opacity-90">Brand Image</p>
+                            </div>
+                            <div>
+                                <div class="text-4xl md:text-5xl font-heading mb-2">Efficient</div>
+                                <p class="font-body opacity-90">Booking Management</p>
+                            </div>
+                            <div>
+                                <div class="text-4xl md:text-5xl font-heading mb-2">Scalable</div>
+                                <p class="font-body opacity-90">Future Ready</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-16 border-t border-lightGray mt-16 fade-in">
+                        <a href="index.html#portfolio" class="inline-flex items-center text-darkGray hover:text-secondary transition-colors duration-300 font-body font-medium">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                            </svg>
+                            Back to All Projects
+                        </a>
+                        
+                        <a href="index.html#contact" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-secondary to-green-500 text-white font-body font-medium rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                            Let's Work Together
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-darkGray text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-white/70 font-body">
+                    © 2025 Manik Shrestha. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Initialize Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+    
+</body>
+</html>
