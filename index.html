@@ -225,14 +225,14 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, #1E3A8A 0%, #F59E0B 100%);
+            background: none;
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: 0;
         }
         
         .service-card:hover::before {
-            opacity: 1;
+            opacity: 0;
         }
         
         .service-card > * {
@@ -1282,7 +1282,7 @@
                 <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 auto-rows-[280px]">
                     
                     <!-- Project Card 1 - LearnAxis (Large Featured) -->
-                    <article class="project-card group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer animate-on-scroll opacity-0 md:col-span-4 lg:col-span-4 md:row-span-2 relative" 
+                    <article class="project-card group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer animate-on-scroll opacity-0 md:col-span-4 lg:col-span-3 md:row-span-1 relative" 
                              data-category="ux-research"
                              style="animation-delay: 0.1s;"
                              role="article"
@@ -1312,19 +1312,19 @@
                                         <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-full">UX Research</span>
                                         <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-body rounded-full">UI Design</span>
                                     </div>
-                                    <div class="flex items-center text-secondary font-body font-medium group-hover:gap-3 gap-2 transition-all">
+                                    <!-- <div class="flex items-center text-secondary font-body font-medium group-hover:gap-3 gap-2 transition-all">
                                         <span>View Case Study</span>
                                         <svg class="w-5 h-5 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                         </svg>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </a>
                     </article>
                     
                     <!-- Project Card 2 - Shambala Hotel (Tall) -->
-                    <article class="project-card group bg-gradient-to-br from-amber-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer animate-on-scroll opacity-0 border border-amber-100 md:col-span-2 lg:col-span-2 md:row-span-2" 
+                    <article class="project-card group bg-gradient-to-br from-amber-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer animate-on-scroll opacity-0 border border-amber-100 md:col-span-2 lg:col-span-3 md:row-span-1" 
                              data-category="ui-design"
                              style="animation-delay: 0.2s;"
                              role="article"
@@ -1384,7 +1384,7 @@
 
             <!-- Content -->
             <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 class="text-xl md:text-2xl font-heading mb-2 transition-colors group-hover:text-[#C9E100]">
+                <h3 class="text-xl md:text-2xl font-heading mb-2 transition-colors group-hover:text-text-red-300">
                     BL Party Palace
                 </h3>
 
@@ -1441,6 +1441,40 @@
                             </div>
                         </a>
                     </article>
+
+                    <!-- Project card 7 - Viewthali Resturent  -->
+                    <article class="project-card group bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer animate-on-scroll opacity-0 md:col-span-2 lg:col-span-3" 
+                             data-category="ui-design"
+                             style="animation-delay: 0.4s;"
+                             role="article"
+                             aria-label="Viewthali Retreat And Resort Landing Page"
+                             tabindex="0">
+                        <a href="viewthali.html" class="block h-full">
+                            <div class="relative overflow-hidden h-full">
+                                <img src="assets/image/Viewthali/first.png" 
+                                     alt="Viewthali Retreat And Resort Landing Page showcase" 
+                                     class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                                     loading="lazy"
+                                     decoding="async">
+                                <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-transparent to-transparent"></div>
+                                <div class="absolute top-4 right-4">
+                                    <span class="px-3 py-1.5 bg-red-600/90 backdrop-blur-sm text-white text-xs font-body rounded-full shadow-lg">🌴 Resort </span>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <h3 class="text-xl md:text-2xl font-heading mb-2 group-hover:text-red-400 transition-colors">Viewthali Retreat And Resort</h3>
+                                    <p class="text-sm text-white/90 font-body mb-3 line-clamp-1">
+                                        Viewthali Retreat And Resort landing page.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-white/10 text-white text-xs font-body rounded-lg">Figma</span>
+                                        <span class="px-3 py-1 bg-red-500/20 text-white text-xs font-body rounded-lg">UI Design</span>
+                                        <span class="px-3 py-1 bg-blue-500/20 text-white text-xs font-body rounded-lg">Web Development</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
                     <!-- Project Card 5 - Thar DriveMax (Wide Dark) -->
                     <article class="project-card group bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer animate-on-scroll opacity-0 md:col-span-2 lg:col-span-3" 
                              data-category="ui-design"
@@ -1492,7 +1526,7 @@
                                     <span class="px-3 py-1.5 bg-green-500/90 backdrop-blur-sm text-white text-xs font-body rounded-full shadow-lg">👟 Shop</span>
                                 </div>
                                 <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 class="text-xl md:text-2xl font-heading mb-2 group-hover:text-green-300 transition-colors">Sneaker E-commerce</h3>
+                                    <h3 class="text-xl text-gray-400 md:text-2xl font-heading mb-2 group-hover:text-green-300 transition-colors">Sneaker E-commerce</h3>
                                     <p class="text-sm text-white/90 font-body mb-3 line-clamp-2">
                                         Clean mobile interface with quick previews and smooth navigation.
                                     </p>
@@ -1504,9 +1538,11 @@
                             </div>
                         </a>
                     </article>
+
                     
-                    <!-- Project Card 7 - Fitness Tracker (Coming Soon - Small)
-                    <article class="project-card group bg-gradient-to-br from-orange-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 cursor-not-allowed animate-on-scroll opacity-0 border-2 border-dashed border-orange-200 md:col-span-2 lg:col-span-2" 
+                    
+                    <!-- Project Card 7 - Fitness Tracker (Coming Soon - Small) -->
+                    <!-- <article class="project-card group bg-gradient-to-br from-orange-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 cursor-not-allowed animate-on-scroll opacity-0 border-2 border-dashed border-orange-200 md:col-span-2 lg:col-span-2" 
                              data-category="prototypes"
                              style="animation-delay: 0.6s;"
                              role="article"
@@ -1514,7 +1550,7 @@
                              tabindex="0">
                         <div class="relative overflow-hidden h-full opacity-70">
                             <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop" 
-                                 alt="Fitness Tracker App design showcase" 
+                                 alt="Viewthali Resturant landing page design" 
                                  class="w-full h-full object-cover grayscale"
                                  loading="lazy"
                                  decoding="async">
@@ -1526,10 +1562,10 @@
                                 <p class="text-white/80 font-body text-sm mt-2">Fitness Tracker App</p>
                             </div>
                         </div>
-                    </article> -->
-                    
+                    </article>
+                     -->
                     <!-- Project Card 8 - Real Estate (Coming Soon - Small) -->
-                    <article class="project-card group bg-gradient-to-br from-blue-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 cursor-not-allowed animate-on-scroll opacity-0 border-2 border-dashed border-blue-200 md:col-span-2 lg:col-span-2" 
+                    <!-- <article class="project-card group bg-gradient-to-br from-blue-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 cursor-not-allowed animate-on-scroll opacity-0 border-2 border-dashed border-blue-200 md:col-span-2 lg:col-span-2" 
                              data-category="ui-design"
                              style="animation-delay: 0.7s;"
                              role="article"
@@ -1549,7 +1585,7 @@
                                 <p class="text-white/80 font-body text-sm mt-2">Real Estate Platform</p>
                             </div>
                         </div>
-                    </article>
+                    </article> -->
                     
                     <!-- Project Card 9 - Social Media (Coming Soon - Small) -->
                     <!-- <article class="project-card group bg-gradient-to-br from-purple-50 to-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 cursor-not-allowed animate-on-scroll opacity-0 border-2 border-dashed border-purple-200 md:col-span-2 lg:col-span-2" 
@@ -1674,10 +1710,10 @@
                         <div class="service-icon mb-6 flex items-center justify-center">
                             <i data-feather="layout" class="text-primary transition-all duration-300 group-hover:rotate-12" style="width: 48px; height: 48px; stroke-width: 2;"></i>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-4 group-hover:text-white transition-colors duration-300">
+                        <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-4">
                             UI Design
                         </h3>
-                        <p class="text-sm md:text-base text-darkGray/70 font-body group-hover:text-white/90 transition-colors duration-300">
+                        <p class="text-sm md:text-base text-darkGray/70 font-body">
                             Creating beautiful and intuitive user interfaces that enhance user experience and drive engagement.
                         </p>
                     </article>
@@ -1690,10 +1726,10 @@
                         <div class="service-icon mb-6 flex items-center justify-center">
                             <i data-feather="search" class="text-primary transition-all duration-300 group-hover:rotate-12" style="width: 48px; height: 48px; stroke-width: 2;"></i>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-4 group-hover:text-white transition-colors duration-300">
+                        <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-4">
                             UX Research
                         </h3>
-                        <p class="text-sm md:text-base text-darkGray/70 font-body group-hover:text-white/90 transition-colors duration-300">
+                        <p class="text-sm md:text-base text-darkGray/70 font-body">
                             Conducting in-depth user research to understand needs, behaviors, and pain points for data-driven design decisions.
                         </p>
                     </article>
@@ -1706,10 +1742,10 @@
                         <div class="service-icon mb-6 flex items-center justify-center">
                             <i data-feather="zap" class="text-primary transition-all duration-300 group-hover:rotate-12" style="width: 48px; height: 48px; stroke-width: 2;"></i>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-4 group-hover:text-white transition-colors duration-300">
+                        <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-4">
                             Prototyping
                         </h3>
-                        <p class="text-sm md:text-base text-darkGray/70 font-body group-hover:text-white/90 transition-colors duration-300">
+                        <p class="text-sm md:text-base text-darkGray/70 font-body">
                             Building interactive prototypes to validate ideas, test functionality, and iterate quickly before development.
                         </p>
                     </article>
@@ -1722,10 +1758,10 @@
                         <div class="service-icon mb-6 flex items-center justify-center">
                             <i data-feather="activity" class="text-primary transition-all duration-300 group-hover:rotate-12" style="width: 48px; height: 48px; stroke-width: 2;"></i>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-4 group-hover:text-white transition-colors duration-300">
+                        <h3 class="text-xl md:text-2xl font-heading text-darkGray mb-4">
                             Interaction Design
                         </h3>
-                        <p class="text-sm md:text-base text-darkGray/70 font-body group-hover:text-white/90 transition-colors duration-300">
+                        <p class="text-sm md:text-base text-darkGray/70 font-body">
                             Designing engaging interactions and micro-animations that delight users and create memorable experiences.
                         </p>
                     </article>
@@ -1998,20 +2034,7 @@
                                     Home
                                 </a>
                             </li>
-                            <li>
-                                <a href="#about" 
-                                   class="text-white/70 hover:text-secondary font-body transition-colors duration-300 focus:outline-none focus:text-secondary"
-                                   aria-label="Navigate to about section">
-                                    About
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#design" 
-                                   class="text-white/70 hover:text-secondary font-body transition-colors duration-300 focus:outline-none focus:text-secondary"
-                                   aria-label="Navigate to design section">
-                                    Design
-                                </a>
-                            </li>
+                          
                             <li>
                                 <a href="#portfolio" 
                                    class="text-white/70 hover:text-secondary font-body transition-colors duration-300 focus:outline-none focus:text-secondary"
@@ -2026,13 +2049,7 @@
                                     Skills
                                 </a>
                             </li>
-                            <li>
-                                <a href="#services" 
-                                   class="text-white/70 hover:text-secondary font-body transition-colors duration-300 focus:outline-none focus:text-secondary"
-                                   aria-label="Navigate to services section">
-                                    Services
-                                </a>
-                            </li>
+                            
                             <li>
                                 <a href="#contact" 
                                    class="text-white/70 hover:text-secondary font-body transition-colors duration-300 focus:outline-none focus:text-secondary"
